@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Khóa học đàn vỡ lòng",
+    "category": "Khóa học",
+    "hero": "khoa_coban.jpg",
+	"gia":"300.000đ/1 month"
+  },
+  {
+    "title": "Khóa học đàn cơ bản",
+    "category": "Khóa học",
+    "hero": "khoa_nangcao.jpg",
+	"gia":"400.000đ/1 month"
+  },
+  {
+    "title": "Khóa học đàn nâng cao",
+    "category": "Khóa học",
+    "hero": "khoa_nangcao1.jpg",
+	"gia":"500.000đ/1 month"
+  },
+  {
+    "title": "Piano SamSung",
+	"category": "Đàn piano",
+    "hero": "piano_1.jpg",
+	"gia":"14.000.000đ"
+  },
+  {
+    "title": "Piano Yamaha 2",
+	"category": "Đàn piano",
+    "hero": "piano_2.jpg",
+	"gia":"16.000.000đ"
+  },
+  {
+    "title": "Piano Casio",
+	"category": "Đàn piano",
+    "hero": "piano_3.jpg",
+	"gia":"25.000.000đ"
+  },
+  {
+    "title": "Piano Iphone",
+	"category": "Đàn piano",
+    "hero": "piano_4.jpg",
+	"gia":"30.000.000đ"
+  },
+  {
+    "title": "Piano Taylor",
+	"category": "Đàn piano",
+    "hero": "piano_5.jpg",
+	"gia":"36.000.000đ"
+  },
+  {
+    "title": "Piano Yamaha",
+	"category": "Đàn piano",
+    "hero": "piano_6.jpg",
+	"gia":"40.000.000đ"
+  }
+ ]

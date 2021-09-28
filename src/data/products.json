@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Piano SamSung",
+	"category": "piano",
+    "hero": "piano_1.jpg",
+	"gia":"14.000.000đ"
+  },
+  {
+    "title": "Piano Yamaha",
+	"category": "piano",
+    "hero": "piano_2.jpg",
+	"gia":"16.000.000đ"
+  },
+  {
+    "title": "Piano Casio",
+	"category": "piano",
+    "hero": "piano_3.jpg",
+	"gia":"25.000.000đ"
+  },
+  {
+    "title": "Piano Iphone",
+	"category": "piano",
+    "hero": "piano_4.jpg",
+	"gia":"30.000.000đ"
+  },
+  {
+    "title": "Piano Taylor",
+	"category": "piano",
+    "hero": "piano_5.jpg",
+	"gia":"36.000.000đ"
+  },
+  {
+    "title": "Piano Yamaha 2",
+	"category": "piano",
+    "hero": "piano_6.jpg",
+	"gia":"40.000.000đ"
+  },
+  {
+    "title": "Piano Yamaha 2",
+	"category": "guitar",
+    "hero": "piano_6.jpg",
+	"gia":"40.000.000đ"
+  }
+ ]
