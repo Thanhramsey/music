@@ -2,6 +2,7 @@
   <v-app-bar
     app
     flat
+	class="menu-bar"
   >
     <v-app-bar-nav-icon
       class="hidden-md-and-up"
@@ -30,7 +31,7 @@
         >
           {{ link.text }}
         </v-btn>
-
+		<!-- Menu sp -->
 		<v-menu
 		bottom
 		content-class="menu-sp"
@@ -52,6 +53,35 @@
 			<v-list>
 				<v-list-item
 				v-for="(item, i) in items"
+				:key="i"
+				@click="menuActionClick(item.action)"
+				>
+				<v-list-item-title>{{ item.title }}</v-list-item-title>
+				</v-list-item>
+			</v-list>
+		</v-menu>
+		<!-- Menu khoa hoc -->
+		<v-menu
+		bottom
+		content-class="menu-sp"
+		origin="center center"
+		rounded="b-xl"
+		transition="scale-transition"
+		offset-y>
+			<template v-slot:activator="{ on, attrs }">
+				<v-btn
+				class="hidden-sm-and-down"
+				text
+				v-bind="attrs"
+				v-on="on"
+				>
+				Danh mục khóa học
+				</v-btn>
+			</template>
+
+			<v-list>
+				<v-list-item
+				v-for="(item, i) in khoaHocs"
 				:key="i"
 				@click="menuActionClick(item.action)"
 				>
@@ -95,6 +125,12 @@
         { title: 'Đàn organ',action: 'listOrgan' },
         { title: 'Các nhạc cụ khác',action:'other' },
       ],
+	  khoaHocs: [
+        { title: 'Khóa học piano',action: 'listPiano' },
+        { title: 'Khóa học guitar',action: 'listGuitar' },
+        { title: 'Khóa học organ',action: 'listOrgan' },
+        { title: 'Khóa học nhạc cụ khác',action:'other' },
+      ],
     }),
 
     methods: {
@@ -128,5 +164,11 @@
 }
 .menu-sp .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
     color: #000000 !important;
+}
+.theme--light.v-app-bar.v-toolbar.v-sheet.menu-bar {
+    background-color: #272727;
+}
+.menu-bar .theme--light.v-btn {
+    color: #ffffff;
 }
 </style>

@@ -27,11 +27,11 @@ export default new Vuex.Store({
       },
 	  {
         text: 'Đàn Organ',
-        href: 'listProduct',
+        href: 'listOrgan',
       },
 	  {
         text: 'Khác',
-        href: 'listProduct',
+        href: 'listOther',
       },
     ],
 	appBars: [
