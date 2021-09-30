@@ -90,6 +90,35 @@
 			</v-list>
 		</v-menu>
 
+		<!-- ho tro khach hang  -->
+		<v-menu
+		bottom
+		content-class="menu-sp"
+		origin="center center"
+		rounded="b-xl"
+		transition="fab-transition"
+		offset-y>
+			<template v-slot:activator="{ on, attrs }">
+				<v-btn
+				class="hidden-sm-and-down"
+				text
+				v-bind="attrs"
+				v-on="on"
+				>
+				Hỗ trợ khách hàng
+				</v-btn>
+			</template>
+
+			<v-list>
+				<v-list-item
+				v-for="(item, i) in hoTroKhachHang"
+				:key="i"
+				@click="menuActionClick(item.action)"
+				>
+				<v-list-item-title>{{ item.title }}</v-list-item-title>
+				</v-list-item>
+			</v-list>
+		</v-menu>
         <v-spacer />
 
         <v-text-field
@@ -130,6 +159,12 @@
         { title: 'Khóa học guitar',action: 'listGuitar' },
         { title: 'Khóa học organ',action: 'listOrgan' },
         { title: 'Khóa học nhạc cụ khác',action:'other' },
+      ],
+	  hoTroKhachHang: [
+        { title: 'Hướng dẫn chọn mua piano',action: 'listPiano' },
+		{ title: 'Khóa học chọn mua guitar',action:'other' },
+        { title: 'Hướng dẫn đặt hàng online',action: 'listGuitar' },
+        { title: 'Câu hỏi thường gặp',action: 'listOrgan' },
       ],
     }),
 

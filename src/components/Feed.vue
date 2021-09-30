@@ -76,6 +76,7 @@
 
     computed: {
       pages () {
+		  console.log(this.articles);
         return Math.ceil(this.articles.length / 11)
       },
       paginatedArticles () {

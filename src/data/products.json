@@ -1,44 +1,110 @@
-[
-  {
-    "title": "Piano SamSung",
-	"category": "piano",
-    "hero": "piano_1.jpg",
-	"gia":"14.000.000đ"
-  },
-  {
-    "title": "Piano Yamaha",
-	"category": "piano",
-    "hero": "piano_2.jpg",
-	"gia":"16.000.000đ"
-  },
-  {
-    "title": "Piano Casio",
-	"category": "piano",
-    "hero": "piano_3.jpg",
-	"gia":"25.000.000đ"
-  },
-  {
-    "title": "Piano Iphone",
-	"category": "piano",
-    "hero": "piano_4.jpg",
-	"gia":"30.000.000đ"
-  },
-  {
-    "title": "Piano Taylor",
-	"category": "piano",
-    "hero": "piano_5.jpg",
-	"gia":"36.000.000đ"
-  },
-  {
-    "title": "Piano Yamaha 2",
-	"category": "piano",
-    "hero": "piano_6.jpg",
-	"gia":"40.000.000đ"
-  },
-  {
-    "title": "Piano Yamaha 2",
-	"category": "guitar",
-    "hero": "piano_6.jpg",
-	"gia":"40.000.000đ"
-  }
- ]
+	[
+		{
+			"title": "Piano SamSung",
+			"category": "piano",
+			"hero": "piano_1.jpg",
+			"gia": "14.000.000 vnđ",
+			"type": "",
+			"label": "",
+			"giaVnd": ""
+		},
+		{
+			"title": "Piano Yamaha",
+			"category": "piano",
+			"hero": "piano_2.jpg",
+			"gia": "16.000.000 vnđ",
+			"type": "",
+			"label": "",
+			"giaVnd": ""
+		},
+		{
+			"title": "Piano Casio",
+			"category": "piano",
+			"hero": "piano_3.jpg",
+			"gia": "25.000.000 vnđ",
+			"type": "",
+			"label": "",
+			"giaVnd": ""
+		},
+		{
+			"title": "Piano Iphone",
+			"category": "piano",
+			"hero": "piano_4.jpg",
+			"gia": "30.000.000 vnđ",
+			"type": "",
+			"label": "",
+			"giaVnd": ""
+		},
+		{
+			"title": "Piano Taylor",
+			"category": "piano",
+			"hero": "piano_5.jpg",
+			"gia": "36.000.000 vnđ",
+			"type": "",
+			"label": "",
+			"giaVnd": ""
+		},
+		{
+			"title": "Piano Yamaha 2",
+			"category": "piano",
+			"hero": "piano_6.jpg",
+			"gia": "40.000.000 vnđ",
+			"type": "",
+			"label": "",
+			"giaVnd": ""
+		},
+		{
+			"title": "TAKAMINE GD10CE",
+			"category": "guitar",
+			"hero": "guitar/takamine-gd10ce.jpg",
+			"giaVnd": "8.490.000 vnđ",
+			"gia": "8490000",
+			"type": "acoustic",
+			"label": "takamine"
+		},
+		{
+			"title": "TAKAMINE-GD51NAT",
+			"category": "guitar",
+			"hero": "guitar/TAKAMINE-GD51NAT.jpg",
+			"giaVnd": "8.030.000 vnđ",
+			"gia": "8030000",
+			"type": "acoustic",
+			"label": "takamine"
+		},
+		{
+			"title": "TAKAMINE GN10",
+			"category": "guitar",
+			"hero": "guitar/takamine-gn10.jpg",
+			"giaVnd": "5.660.000 vnđ",
+			"gia": "5660000",
+			"type": "acoustic",
+			"label": "takamine"
+		},
+		{
+			"title": "Yamaha C40",
+			"category": "guitar",
+			"hero": "guitar/Classic-Yamaha-C40.jpg",
+			"gia": "2790000",
+			"giaVnd": "2.790.000 vnđ",
+			"type": "classic",
+			"label": "yamaha"
+		},
+		{
+			"title": "Yamaha C70",
+			"category": "guitar",
+			"hero": "guitar/Classic-Yamaha-C70.jpg",
+			"gia": "3190000",
+			"giaVnd": "3.190.000 vnđ",
+			"type": "classic",
+			"label": "yamaha"
+		},
+		{
+			"title": "Yamaha FS100C BL",
+			"category": "guitar",
+			"hero": "guitar/guitar-FS100C.jpg",
+			"gia": "3390000",
+			"giaVnd": "3.390.000 vnđ",
+			"type": "acoustic",
+			"label": "yamaha"
+		}
+	]
