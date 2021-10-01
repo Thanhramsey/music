@@ -154,12 +154,12 @@
         { title: 'Đàn organ',action: 'listOrgan' },
         { title: 'Phụ kiện và nhạc cụ khác',action:'other' },
       ],
-	  khoaHocs: [
-        { title: 'Khóa học piano',action: 'listPiano' },
-        { title: 'Khóa học guitar',action: 'listGuitar' },
-        { title: 'Khóa học organ',action: 'listOrgan' },
-        { title: 'Khóa học nhạc cụ khác',action:'other' },
-      ],
+	//   khoaHocs: [
+    //     { title: 'Khóa học piano',action: 'listPiano' },
+    //     { title: 'Khóa học guitar',action: 'listGuitar' },
+    //     { title: 'Khóa học organ',action: 'listOrgan' },
+    //     { title: 'Khóa học nhạc cụ khác',action:'other' },
+    //   ],
 	  hoTroKhachHang: [
         { title: 'Hướng dẫn chọn mua piano',action: 'listPiano' },
 		{ title: 'Khóa học chọn mua guitar',action:'other' },

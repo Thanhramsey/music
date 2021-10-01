@@ -10,9 +10,7 @@
       <v-list-item
         v-for="(link, i) in links"
         :key="i"
-        :to="link.to"
-        :href="link.href"
-        @click="onClick($event, link)"
+        @click="menuActionClick(link.href)"
       >
         <v-list-item-title v-text="link.text" />
       </v-list-item>
@@ -44,20 +42,17 @@
 
     methods: {
       ...mapMutations(['setDrawer']),
-      onClick (e, item) {
-        e.stopPropagation()
-
-        if (e.to === '/') {
-          this.$vuetify.goTo(0)
-          this.setDrawer(false)
-          return
-        }
-
-        if (e.to || !e.href) return
-
-        // this.$vuetify.goTo(item.href)
-		this.$router.push({ name: e.href }).catch(err=> {});
-        this.setDrawer(false)
+	   menuActionClick(action) {
+		this.setDrawer(false)
+		if (action === "listPiano") {
+			this.$router.push({ name: 'listPiano' }).catch(err=> {});
+		} else if (action === "listGuitar") {
+			this.$router.push({ name: 'listGuitar' }).catch(err=> {});
+		}else if (action === "listOrgan") {
+			this.$router.push({ name: 'listProduct'}).catch(err=> {});
+		}else if (action === "other") {
+			this.$router.push({ name: 'listProduct'}).catch(err=> {});
+		}
       },
     },
   }
