@@ -47,16 +47,16 @@
       onClick (e, item) {
         e.stopPropagation()
 
-        if (item.to === '/') {
+        if (e.to === '/') {
           this.$vuetify.goTo(0)
           this.setDrawer(false)
           return
         }
 
-        if (item.to || !item.href) return
+        if (e.to || !e.href) return
 
         // this.$vuetify.goTo(item.href)
-		this.$router.push({ name: item.href }).catch(err=> {});
+		this.$router.push({ name: e.href }).catch(err=> {});
         this.setDrawer(false)
       },
     },
