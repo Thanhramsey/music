@@ -10,6 +10,7 @@
       :height="value.prominent ? 450 : 350"
       dark
 	  class="card-info"
+	  data-aos='flip-left'
     >
       <v-img
         :src="require(`@/assets/articles/${value.hero}`)"

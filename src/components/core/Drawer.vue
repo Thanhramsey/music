@@ -55,7 +55,8 @@
 
         if (item.to || !item.href) return
 
-        this.$vuetify.goTo(item.href)
+        // this.$vuetify.goTo(item.href)
+		this.$router.push({ name: item.href }).catch(err=> {});
         this.setDrawer(false)
       },
     },

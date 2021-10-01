@@ -106,5 +106,104 @@
 			"giaVnd": "3.390.000 vnđ",
 			"type": "acoustic",
 			"label": "yamaha"
+		},
+		{
+			"title": "Cordoba C1",
+			"category": "guitar",
+			"hero": "guitar/7.jpg",
+			"gia": "4650000",
+			"giaVnd": "4.650.000 vnđ",
+			"type": "classic",
+			"label": "cordoba"
+		},
+		{
+			"title": "Cordoba C04",
+			"category": "guitar",
+			"hero": "guitar/c 04.jpg",
+			"gia": "6390000",
+			"giaVnd": "6.390.000 vnđ",
+			"type": "classic",
+			"label": "cordoba"
+		},
+		{
+			"title": "Cordoba C05",
+			"category": "guitar",
+			"hero": "guitar/c 05.jpg",
+			"gia": "6690000",
+			"giaVnd": "6.690.000 vnđ",
+			"type": "classic",
+			"label": "cordoba"
+		},
+		{
+			"title": "Fender C60s",
+			"category": "guitar",
+			"hero": "guitar/fender-cc-60s-450x471.jpg",
+			"gia": "5690000",
+			"giaVnd": "5.690.000 vnđ",
+			"type": "acoustic",
+			"label": "fender"
+		},
+		{
+			"title": "Fender C60SE",
+			"category": "guitar",
+			"hero": "guitar/fender-cc-60sce-450x471.jpg",
+			"gia": "4990000",
+			"giaVnd": "4.990.000 vnđ",
+			"type": "acoustic",
+			"label": "fender"
+		},
+		{
+			"title": "Fender CD140SE",
+			"category": "guitar",
+			"hero": "guitar/fender-cd-140sce-nat-450x471.jpg",
+			"gia": "7390000",
+			"giaVnd": "7.390.000 vnđ",
+			"type": "acoustic",
+			"label": "fender"
+		},
+		{
+			"title": "TAYLOR 110E",
+			"category": "guitar",
+			"hero": "guitar/guitar-FS100C.jpg",
+			"gia": "23390000",
+			"giaVnd": "23.390.000 vnđ",
+			"type": "acoustic",
+			"label": "taylor"
+		},
+		{
+			"title": "Tanglewood-DBTSFCEEB",
+			"category": "guitar",
+			"hero": "guitar/Tanglewood-DBTSFCEEB.jpg",
+			"gia": "5690000",
+			"giaVnd": "5.690.000 vnđ",
+			"type": "acoustic",
+			"label": "tanglewood"
+		},
+		{
+			"title": "Tanglewood WCR-DCE",
+			"category": "guitar",
+			"hero": "guitar/TWCR-DCE-t-450x471.jpg",
+			"gia": "6390000",
+			"giaVnd": "6.390.000 vnđ",
+			"type": "acoustic",
+			"label": "tanglewood"
+		},
+		{
+			"title": "Tanglewood twr2",
+			"category": "guitar",
+			"hero": "guitar/twr2d_2020-450x471.jpg",
+			"gia": "2790000",
+			"giaVnd": "2.790.000 vnđ",
+			"type": "acoustic",
+			"label": "tanglewood"
+		},
+		{
+			"title": "Tanglewood twudce",
+			"category": "guitar",
+			"hero": "guitar/twudce_2019-450x471.jpg",
+			"gia": "4200000",
+			"giaVnd": "4.200.000 vnđ",
+			"type": "acoustic",
+			"label": "tanglewood"
 		}
 	]

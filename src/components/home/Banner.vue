@@ -1,5 +1,6 @@
 <template>
-  <v-carousel>
+<v-container>
+  <v-carousel height="450" :cycle="true" interval="1500">
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
@@ -8,6 +9,7 @@
       transition="fade-transition"
     ></v-carousel-item>
   </v-carousel>
+</v-container>
 </template>
 
 <script>

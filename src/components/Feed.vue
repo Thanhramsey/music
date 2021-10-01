@@ -70,21 +70,17 @@
     },
 
     data: () => ({
-      layout: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      layout: [3, 3, 3, 3, 3, 3, 3, 3, 3],
       page: 1,
     }),
 
     computed: {
       pages () {
-		  console.log(this.articles);
-        return Math.ceil(this.articles.length / 11)
+        return Math.ceil(this.articles.length / 9)
       },
       paginatedArticles () {
-        const start = (this.page - 1) * 11
-        const stop = this.page * 11
-		if(this.category != "" && this.category != undefined) {
-			return this.articles.slice(start, stop).filter(x=> x.category == this.category)
-		}
+        const start = (this.page - 1) * 9
+        const stop = this.page * 9
         return this.articles.slice(start, stop)
       },
     },

@@ -152,7 +152,7 @@
         { title: 'Đàn piano',action: 'listPiano' },
         { title: 'Đàn guitar',action: 'listGuitar' },
         { title: 'Đàn organ',action: 'listOrgan' },
-        { title: 'Các nhạc cụ khác',action:'other' },
+        { title: 'Phụ kiện và nhạc cụ khác',action:'other' },
       ],
 	  khoaHocs: [
         { title: 'Khóa học piano',action: 'listPiano' },

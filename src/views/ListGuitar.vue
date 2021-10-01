@@ -127,9 +127,25 @@ export default {
         value: "takamine",
       },
       {
+        text: "Tanglewood",
+        value: "tanglewood",
+      },
+	  {
         text: "Yamaha",
         value: "yamaha",
       },
+	  {
+        text: "Fender",
+        value: "fender",
+      },
+	  {
+        text: "Taylor",
+        value: "taylor",
+      },
+	  {
+        text: "Cordoba",
+        value: "cordoba",
+      }
     ],
   }),
   computed: {
