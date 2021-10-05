@@ -162,7 +162,7 @@ export default {
     loader() {
       const l = this.loader;
       this[l] = !this[l];
-      setTimeout(() => (this[l] = false), 1000);
+      setTimeout(() => (this[l] = false), 500);
       this.loader = null;
     },
   },
