@@ -61,7 +61,7 @@
 			</v-list>
 		</v-menu>
 		<!-- Menu khoa hoc -->
-		<v-menu
+		<!-- <v-menu
 		bottom
 		content-class="menu-sp"
 		origin="center center"
@@ -88,7 +88,7 @@
 				<v-list-item-title>{{ item.title }}</v-list-item-title>
 				</v-list-item>
 			</v-list>
-		</v-menu>
+		</v-menu> -->
 
 		<!-- ho tro khach hang  -->
 		<v-menu

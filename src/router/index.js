@@ -16,6 +16,11 @@ export default new Router({
       component: Home,
     },
 	{
+		path: '/music',
+		name: 'home',
+		component: Home,
+	  },
+	{
 		path: '/listPiano',
 		name: 'listPiano',
 		component: ListPiano,

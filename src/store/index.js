@@ -11,7 +11,7 @@ export default new Vuex.Store({
     items: [
       {
         text: 'Trang chủ',
-        href: '/',
+        href: '/music',
       },
       {
         text: 'About us',
@@ -37,7 +37,7 @@ export default new Vuex.Store({
 	appBars: [
 		{
 		  text: 'Trang chủ',
-		  href: '/',
+		  href: '/music',
 		},
 		{
 		  text: 'About us',

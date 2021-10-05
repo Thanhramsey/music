@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="12" :md="size === 2 ? 6 : size === 3 ? 4 : undefined">
+  <v-col cols="12" :md="size === 2 ? 4 : size === 3 ? 3 : undefined">
     <v-dialog v-model="dialog" max-width="60%" @keydown.esc="cancel">
       <v-card>
         <v-img :src="pic" alt="" contain />
@@ -10,7 +10,7 @@
       :height="value.prominent ? 450 : 350"
       dark
 	  class="card-info"
-	  data-aos='flip-left'
+	  data-aos='fade-right'
     >
       <v-img
         :src="require(`@/assets/articles/${value.hero}`)"

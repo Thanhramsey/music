@@ -131,7 +131,7 @@
 		  <v-spacer/>
 	  </v-row>
 	  <v-row class="mt-3">
-		   <v-carousel height="250" class="feedback-carou" :show-arrows="false" :cycle="true" interval="1500" >
+		   <v-carousel height="250" class="feedback-carou" :show-arrows="false" :cycle="false" interval="1500" >
 			   <v-carousel-item
 				v-for="(item, i) in feedBacks"
 				:key="i"
@@ -166,37 +166,37 @@ export default {
     return {
       feedBacks: [
         {
-          icon1: "fa fa-user-circle",
-          name1: "Huỳnh Thị Mỹ Chi",
-          feedback1: "captain teemo on duty  captain teemo on duty ",
-          icon2: "fa fa-user-circle",
+          icon1: "fa fa-address-card",
+          name1: "Giroud",
+          feedback1: "Tempo là nơi giúp tôi biết đến Teemo",
+          icon2: "fa fa-address-card",
           name2: "Ronaldo",
-          feedback2: "Dead is like the wind ,always by my side",
-          icon3: "fa fa-user-circle",
+          feedback2: "Tempo là nơi giúp tôi biết đến Yasuo",
+          icon3: "fa fa-address-card",
           name3: "Messi",
-          feedback3: "Dead is like the wind ,always by my side",
+          feedback3: "Tempo là nơi giúp tôi biết đến Darius",
           dataAos: "fade-in",
         },
         {
-          icon1: "fa fa-user-circle",
+          icon1: "fa fa-address-card",
           name1: "Teemo",
           feedback1: "captain teemo on duty  captain teemo on duty ",
-          icon2: "fa fa-user-circle",
+          icon2: "fa fa-address-card",
           name2: "Yasuo",
           feedback2: "Dead is like the wind ,always by my side",
-          icon3: "fa fa-user-circle",
+          icon3: "fa fa-address-card",
           name3: "Yone",
           feedback3: "Dead is like the wind ,always by my side",
           dataAos: "fade-in",
         },
         {
-          icon1: "fa fa-user-circle",
+          icon1: "fa fa-address-card",
           name1: "Darius",
           feedback1: "captain teemo on duty  captain teemo on duty ",
-          icon2: "fa fa-user-circle",
+          icon2: "fa fa-address-card",
           name2: "Sona",
           feedback2: "Dead is like the wind ,always by my side",
-          icon3: "fa fa-user-circle",
+          icon3: "fa fa-address-card",
           name3: "Jax",
           feedback3: "Dead is like the wind ,always by my side",
           dataAos: "fade-in",

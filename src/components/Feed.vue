@@ -70,17 +70,28 @@
     },
 
     data: () => ({
-      layout: [3, 3, 3, 3, 3, 3, 3, 3, 3],
       page: 1,
     }),
 
     computed: {
+
+	  layout(){
+		  return this.category== 'guitar' ? [3, 3, 3, 3, 3, 3, 3, 3, 3,3,3,3] : [2, 2, 2, 2, 2, 2, 2, 2, 2];
+	  },
       pages () {
-        return Math.ceil(this.articles.length / 9)
+        return this.category== 'guitar' ? Math.ceil(this.articles.length / 12) : Math.ceil(this.articles.length / 9)
       },
       paginatedArticles () {
-        const start = (this.page - 1) * 9
-        const stop = this.page * 9
+
+        let start = (this.page - 1);
+        let stop = this.page;
+		if(this.category== 'guitar'){
+			start = start * 12;
+			stop = stop * 12;
+		}else{
+			start = start * 9;
+			stop = stop * 9;
+		}
         return this.articles.slice(start, stop)
       },
     },
