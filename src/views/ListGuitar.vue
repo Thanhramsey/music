@@ -8,7 +8,7 @@
             label="Hãng đàn"
             dense
             solo
-			outlined
+            outlined
             v-model="hangDan"
           ></v-select>
         </v-col>
@@ -18,7 +18,7 @@
             label="Loại đàn"
             dense
             solo
-			outlined
+            outlined
             v-model="loaiDan"
           ></v-select>
         </v-col>
@@ -30,7 +30,7 @@
             solo
             dense
             type="number"
-			v-model="giaTu"
+            v-model="giaTu"
           >
           </v-text-field>
         </v-col>
@@ -42,7 +42,7 @@
             solo
             dense
             type="number"
-			v-model="den"
+            v-model="den"
           >
           </v-text-field>
         </v-col>
@@ -60,30 +60,22 @@
         </v-col>
       </v-row>
     </v-container>
-	<v-container class="list-icon neons">
-		<v-row>
-			<v-col cols="12" lg="2">
-			</v-col>
-			<v-col cols="12" lg="4">
-				<v-icon
-				large
-				>
-				fa fa-gift
-				</v-icon>
-				<span class="ml-2">Miễn phí toàn quốc cho đơn hàng từ 4.000.000Vnđ</span>
-			</v-col>
-			<v-col cols="12" lg="5">
-				<v-icon
-				large
-				>
-				fa fa-truck
-				</v-icon>
-				<span  class="ml-2">Tặng bộ phụ kiện hấp dẫn khi mua đàn và bảo hành trọn đời</span>
-			</v-col>
-			<v-col cols="12" lg="1">
-			</v-col>
-		</v-row>
-	</v-container>
+    <v-container class="list-icon neons">
+      <v-row>
+        <v-col cols="12" lg="6">
+          <v-icon color="#607d8b" large> fa fa-gift </v-icon>
+          <span class="ml-2 btn"
+            >Miễn phí toàn quốc cho đơn hàng từ 4.000.000Vnđ</span
+          >
+        </v-col>
+        <v-col cols="12" lg="6">
+          <v-icon color="#607d8b" large> fa fa-truck </v-icon>
+          <span class="ml-2 btn"
+            >Tặng bộ phụ kiện hấp dẫn khi mua đàn và bảo hành trọn đời</span
+          >
+        </v-col>
+      </v-row>
+    </v-container>
     <articles :articles="guitars" :category="category">
       <!-- <banner /> -->
     </articles>
@@ -101,8 +93,8 @@ export default {
     guitars: "",
     loaiDan: "",
     hangDan: "",
-	giaTu:0,
-	den:0,
+    giaTu: 0,
+    den: 0,
     loaiDans: [
       {
         text: "Loại đàn",
@@ -130,22 +122,22 @@ export default {
         text: "Tanglewood",
         value: "tanglewood",
       },
-	  {
+      {
         text: "Yamaha",
         value: "yamaha",
       },
-	  {
+      {
         text: "Fender",
         value: "fender",
       },
-	  {
+      {
         text: "Taylor",
         value: "taylor",
       },
-	  {
+      {
         text: "Cordoba",
         value: "cordoba",
-      }
+      },
     ],
   }),
   computed: {
@@ -169,89 +161,94 @@ export default {
   methods: {
     timKiem() {
       this.loader = "loading3";
-      if (this.hangDan == "" && this.loaiDan == "" && this.giaTu == 0 && this.den== 0) {
+      if (
+        this.hangDan == "" &&
+        this.loaiDan == "" &&
+        this.giaTu == 0 &&
+        this.den == 0
+      ) {
         this.guitars = this.products.filter((x) => x.category == "guitar");
       } else {
-        if (this.loaiDan != "" && this.hangDan != "" && this.giaTu != 0 && this.den != 0) {
+        if (
+          this.loaiDan != "" &&
+          this.hangDan != "" &&
+          this.giaTu != 0 &&
+          this.den != 0
+        ) {
           this.guitars = this.products.filter(
-            (x) => x.label == this.hangDan && x.type == this.loaiDan && parseInt(x.gia) > this.giaTu && parseInt(x.gia) < this.den
+            (x) =>
+              x.label == this.hangDan &&
+              x.type == this.loaiDan &&
+              parseInt(x.gia) > this.giaTu &&
+              parseInt(x.gia) < this.den
           );
-        }else{
-			this.guitars = this.products;
-			if (this.loaiDan != "") {
-				this.guitars = this.guitars.filter((x) => x.type == this.loaiDan);
-			}
-			if (this.hangDan != "") {
-				this.guitars = this.guitars.filter((x) => x.label == this.hangDan);
-			}
-			if (this.giaTu != 0) {
-				this.guitars = this.guitars.filter((x) => parseInt(x.gia) > this.giaTu);
-			}
-			if(this.den != 0){
-				this.guitars = this.guitars.filter((x) => parseInt(x.gia) < this.den);
-			}
-		}
+        } else {
+          this.guitars = this.products;
+          if (this.loaiDan != "") {
+            this.guitars = this.guitars.filter((x) => x.type == this.loaiDan);
+          }
+          if (this.hangDan != "") {
+            this.guitars = this.guitars.filter((x) => x.label == this.hangDan);
+          }
+          if (this.giaTu != 0) {
+            this.guitars = this.guitars.filter(
+              (x) => parseInt(x.gia) > this.giaTu
+            );
+          }
+          if (this.den != 0) {
+            this.guitars = this.guitars.filter(
+              (x) => parseInt(x.gia) < this.den
+            );
+          }
+        }
       }
     },
   },
 };
 </script>
 
-<style >
-@-moz-keyframes loader {
-  from {
-    transform: rotate(0);
+<style lang="scss">
+.btn {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 20px;
+  background: #white;
+  font-size: 16px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 1s;
+  &:after,
+  &:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 0px solid #fff;
+    transition: all 1s;
   }
-  to {
-    transform: rotate(360deg);
+  &:after {
+    top: -1px;
+    left: -1px;
+    border-top: 3px solid #607d8b;
+    border-left: 3px solid #607d8b;
   }
-}
-@-webkit-keyframes loader {
-  from {
-    transform: rotate(0);
+  &:before {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 3px solid #607d8b;
+    border-right: 3px solid #607d8b;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@-o-keyframes loader {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes loader {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.container.list-icon i{
-	color: #607d8b;
-}
-
-.neons span {
-  font-size: 14px;
-  text-align: center;
-   font-weight: bold;
-  -webkit-animation: glow 2s ease-in-out infinite alternate;
-  -moz-animation: glow 2s ease-in-out infinite alternate;
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-     from {
-      color: #fff;
-    text-shadow: 0 0 10px #a200ff, 0 0 20px #a200ff, 0 0 30px #a200ff, 0 0 40px #a200ff, 0 0 50px #a200ff, 0 0 60px #a200ff, 0 0 70px #a200ff, 0 0 90px #a200ff;
-  }
-
-  to {
-     color: gray;
-    text-shadow: 0 0 20px #a200ff, 0 0 30px #a200ff, 0 0 40px #a200ff, 0 0 50px #a200ff, 0 0 60px #a200ff, 0 0 70px #a200ff, 0 0 80px #a200ff, 0 1 90px #a200ff;
+  &:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background:rgba(255, 214, 120, 0.51);
+    // color:white;
+    &:before,
+    &:after {
+      width: 100%;
+      height: 100%;
+    //   border-color:white;
+    }
   }
 }
 </style>

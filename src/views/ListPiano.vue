@@ -8,7 +8,7 @@
             label="Hãng đàn"
             dense
             solo
-			outlined
+            outlined
             v-model="hangDan"
           ></v-select>
         </v-col>
@@ -18,7 +18,7 @@
             label="Loại đàn"
             dense
             solo
-			outlined
+            outlined
             v-model="loaiDan"
           ></v-select>
         </v-col>
@@ -30,7 +30,7 @@
             solo
             dense
             type="number"
-			v-model="giaTu"
+            v-model="giaTu"
           >
           </v-text-field>
         </v-col>
@@ -42,7 +42,7 @@
             solo
             dense
             type="number"
-			v-model="den"
+            v-model="den"
           >
           </v-text-field>
         </v-col>
@@ -60,30 +60,22 @@
         </v-col>
       </v-row>
     </v-container>
-	<v-container class="list-icon neons">
-		<v-row>
-			<v-col cols="12" lg="2">
-			</v-col>
-			<v-col cols="12" lg="4">
-				<v-icon
-				large
-				>
-				fa fa-gift
-				</v-icon>
-				<span class="ml-2">Miễn phí toàn quốc cho đơn hàng từ 4.000.000Vnđ</span>
-			</v-col>
-			<v-col cols="12" lg="5">
-				<v-icon
-				large
-				>
-				fa fa-truck
-				</v-icon>
-				<span  class="ml-2">Tặng bộ phụ kiện hấp dẫn khi mua đàn và bảo hành trọn đời</span>
-			</v-col>
-			<v-col cols="12" lg="1">
-			</v-col>
-		</v-row>
-	</v-container>
+    <v-container class="list-icon neons">
+      <v-row>
+        <v-col cols="12" lg="6">
+          <v-icon color="#607d8b" large> fa fa-gift </v-icon>
+          <span class="ml-2 btn"
+            >Miễn phí toàn quốc cho đơn hàng từ 4.000.000Vnđ</span
+          >
+        </v-col>
+        <v-col cols="12" lg="6">
+          <v-icon color="#607d8b" large> fa fa-truck </v-icon>
+          <span class="ml-2 btn"
+            >Tặng bộ phụ kiện hấp dẫn khi mua đàn và bảo hành trọn đời</span
+          >
+        </v-col>
+      </v-row>
+    </v-container>
     <articles :articles="pianos" :category="category">
       <!-- <banner /> -->
     </articles>
@@ -101,8 +93,8 @@ export default {
     pianos: "",
     loaiDan: "",
     hangDan: "",
-	giaTu:0,
-	den:0,
+    giaTu: 0,
+    den: 0,
     loaiDans: [
       {
         text: "Loại đàn",
@@ -130,22 +122,22 @@ export default {
         text: "Tanglewood",
         value: "tanglewood",
       },
-	  {
+      {
         text: "Yamaha",
         value: "yamaha",
       },
-	  {
+      {
         text: "Fender",
         value: "fender",
       },
-	  {
+      {
         text: "Taylor",
         value: "taylor",
       },
-	  {
+      {
         text: "Cordoba",
         value: "cordoba",
-      }
+      },
     ],
   }),
   computed: {
@@ -169,28 +161,44 @@ export default {
   methods: {
     timKiem() {
       this.loader = "loading3";
-      if (this.hangDan == "" && this.loaiDan == "" && this.giaTu == 0 && this.den== 0) {
+      if (
+        this.hangDan == "" &&
+        this.loaiDan == "" &&
+        this.giaTu == 0 &&
+        this.den == 0
+      ) {
         this.pianos = this.products.filter((x) => x.category == "piano");
       } else {
-        if (this.loaiDan != "" && this.hangDan != "" && this.giaTu != 0 && this.den != 0) {
+        if (
+          this.loaiDan != "" &&
+          this.hangDan != "" &&
+          this.giaTu != 0 &&
+          this.den != 0
+        ) {
           this.pianos = this.products.filter(
-            (x) => x.label == this.hangDan && x.type == this.loaiDan && parseInt(x.gia) > this.giaTu && parseInt(x.gia) < this.den
+            (x) =>
+              x.label == this.hangDan &&
+              x.type == this.loaiDan &&
+              parseInt(x.gia) > this.giaTu &&
+              parseInt(x.gia) < this.den
           );
-        }else{
-			this.pianos = this.products;
-			if (this.loaiDan != "") {
-				this.pianos = this.pianos.filter((x) => x.type == this.loaiDan);
-			}
-			if (this.hangDan != "") {
-				this.pianos = this.pianos.filter((x) => x.label == this.hangDan);
-			}
-			if (this.giaTu != 0) {
-				this.pianos = this.pianos.filter((x) => parseInt(x.gia) > this.giaTu);
-			}
-			if(this.den != 0){
-				this.pianos = this.pianos.filter((x) => parseInt(x.gia) < this.den);
-			}
-		}
+        } else {
+          this.pianos = this.products;
+          if (this.loaiDan != "") {
+            this.pianos = this.pianos.filter((x) => x.type == this.loaiDan);
+          }
+          if (this.hangDan != "") {
+            this.pianos = this.pianos.filter((x) => x.label == this.hangDan);
+          }
+          if (this.giaTu != 0) {
+            this.pianos = this.pianos.filter(
+              (x) => parseInt(x.gia) > this.giaTu
+            );
+          }
+          if (this.den != 0) {
+            this.pianos = this.pianos.filter((x) => parseInt(x.gia) < this.den);
+          }
+        }
       }
     },
   },

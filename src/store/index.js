@@ -44,6 +44,7 @@ export default new Vuex.Store({
 		  href: '#about',
 		},
 	],
+	StoreCart: [],
   },
 
   getters: {
@@ -72,12 +73,31 @@ export default new Vuex.Store({
 	appBars: (state, getters) => {
 		return state.appBars;
 	},
+	StoreCart: (state) => state.StoreCart,
+	products: (state) => state.products,
   },
   mutations: {
     setDrawer: (state, payload) => (state.drawer = payload),
     toggleDrawer: state => (state.drawer = !state.drawer),
+	ADD_Item(state, id) {
+		state.StoreCart.push(id);
+	},
+	REMOVE_Item(state, index) {
+		state.StoreCart.splice(index, 1);
+	},
+	RESET_Item(state) {
+		state.StoreCart = [];
+	},
   },
   actions: {
-
+	addItem(context, id) {
+		context.commit("ADD_Item", id);
+	},
+	removeItem(context, index) {
+		context.commit("REMOVE_Item", index);
+	},
+	thanhToan(context){
+		context.commit("RESET_Item");
+	}
   },
 })

@@ -1,209 +1,232 @@
-	[
-		{
-			"title": "Piano SamSung",
-			"category": "piano",
-			"hero": "piano_1.jpg",
-			"gia": "14.000.000 vnđ",
-			"type": "",
-			"label": "",
-			"giaVnd": ""
-		},
-		{
-			"title": "Piano Yamaha",
-			"category": "piano",
-			"hero": "piano_2.jpg",
-			"gia": "16.000.000 vnđ",
-			"type": "",
-			"label": "",
-			"giaVnd": ""
-		},
-		{
-			"title": "Piano Casio",
-			"category": "piano",
-			"hero": "piano_3.jpg",
-			"gia": "25.000.000 vnđ",
-			"type": "",
-			"label": "",
-			"giaVnd": ""
-		},
-		{
-			"title": "Piano Iphone",
-			"category": "piano",
-			"hero": "piano_4.jpg",
-			"gia": "30.000.000 vnđ",
-			"type": "",
-			"label": "",
-			"giaVnd": ""
-		},
-		{
-			"title": "Piano Taylor",
-			"category": "piano",
-			"hero": "piano_5.jpg",
-			"gia": "36.000.000 vnđ",
-			"type": "",
-			"label": "",
-			"giaVnd": ""
-		},
-		{
-			"title": "Piano Yamaha 2",
-			"category": "piano",
-			"hero": "piano_6.jpg",
-			"gia": "40.000.000 vnđ",
-			"type": "",
-			"label": "",
-			"giaVnd": ""
-		},
-		{
-			"title": "TAKAMINE GD10CE",
-			"category": "guitar",
-			"hero": "guitar/takamine-gd10ce.jpg",
-			"giaVnd": "8.490.000 vnđ",
-			"gia": "8490000",
-			"type": "acoustic",
-			"label": "takamine"
-		},
-		{
-			"title": "TAKAMINE-GD51NAT",
-			"category": "guitar",
-			"hero": "guitar/TAKAMINE-GD51NAT.jpg",
-			"giaVnd": "8.030.000 vnđ",
-			"gia": "8030000",
-			"type": "acoustic",
-			"label": "takamine"
-		},
-		{
-			"title": "TAKAMINE GN10",
-			"category": "guitar",
-			"hero": "guitar/takamine-gn10.jpg",
-			"giaVnd": "5.660.000 vnđ",
-			"gia": "5660000",
-			"type": "acoustic",
-			"label": "takamine"
-		},
-		{
-			"title": "Yamaha C40",
-			"category": "guitar",
-			"hero": "guitar/Classic-Yamaha-C40.jpg",
-			"gia": "2790000",
-			"giaVnd": "2.790.000 vnđ",
-			"type": "classic",
-			"label": "yamaha"
-		},
-		{
-			"title": "Yamaha C70",
-			"category": "guitar",
-			"hero": "guitar/Classic-Yamaha-C70.jpg",
-			"gia": "3190000",
-			"giaVnd": "3.190.000 vnđ",
-			"type": "classic",
-			"label": "yamaha"
-		},
-		{
-			"title": "Yamaha FS100C BL",
-			"category": "guitar",
-			"hero": "guitar/guitar-FS100C.jpg",
-			"gia": "3390000",
-			"giaVnd": "3.390.000 vnđ",
-			"type": "acoustic",
-			"label": "yamaha"
-		},
-		{
-			"title": "Cordoba C1",
-			"category": "guitar",
-			"hero": "guitar/7.jpg",
-			"gia": "4650000",
-			"giaVnd": "4.650.000 vnđ",
-			"type": "classic",
-			"label": "cordoba"
-		},
-		{
-			"title": "Cordoba C04",
-			"category": "guitar",
-			"hero": "guitar/c 04.jpg",
-			"gia": "6390000",
-			"giaVnd": "6.390.000 vnđ",
-			"type": "classic",
-			"label": "cordoba"
-		},
-		{
-			"title": "Cordoba C05",
-			"category": "guitar",
-			"hero": "guitar/c 05.jpg",
-			"gia": "6690000",
-			"giaVnd": "6.690.000 vnđ",
-			"type": "classic",
-			"label": "cordoba"
-		},
-		{
-			"title": "Fender C60s",
-			"category": "guitar",
-			"hero": "guitar/fender-cc-60s-450x471.jpg",
-			"gia": "5690000",
-			"giaVnd": "5.690.000 vnđ",
-			"type": "acoustic",
-			"label": "fender"
-		},
-		{
-			"title": "Fender C60SE",
-			"category": "guitar",
-			"hero": "guitar/fender-cc-60sce-450x471.jpg",
-			"gia": "4990000",
-			"giaVnd": "4.990.000 vnđ",
-			"type": "acoustic",
-			"label": "fender"
-		},
-		{
-			"title": "Fender CD140SE",
-			"category": "guitar",
-			"hero": "guitar/fender-cd-140sce-nat-450x471.jpg",
-			"gia": "7390000",
-			"giaVnd": "7.390.000 vnđ",
-			"type": "acoustic",
-			"label": "fender"
-		},
-		{
-			"title": "TAYLOR 110E",
-			"category": "guitar",
-			"hero": "guitar/guitar-FS100C.jpg",
-			"gia": "23390000",
-			"giaVnd": "23.390.000 vnđ",
-			"type": "acoustic",
-			"label": "taylor"
-		},
-		{
-			"title": "Tanglewood-DBTSFCEEB",
-			"category": "guitar",
-			"hero": "guitar/Tanglewood-DBTSFCEEB.jpg",
-			"gia": "5690000",
-			"giaVnd": "5.690.000 vnđ",
-			"type": "acoustic",
-			"label": "tanglewood"
-		},
-		{
-			"title": "Tanglewood WCR-DCE",
-			"category": "guitar",
-			"hero": "guitar/TWCR-DCE-t-450x471.jpg",
-			"gia": "6390000",
-			"giaVnd": "6.390.000 vnđ",
-			"type": "acoustic",
-			"label": "tanglewood"
-		},
-		{
-			"title": "Tanglewood twr2",
-			"category": "guitar",
-			"hero": "guitar/twr2d_2020-450x471.jpg",
-			"gia": "2790000",
-			"giaVnd": "2.790.000 vnđ",
-			"type": "acoustic",
-			"label": "tanglewood"
-		},
-		{
-			"title": "Tanglewood twudce",
-			"category": "guitar",
-			"hero": "guitar/twudce_2019-450x471.jpg",
-			"gia": "4200000",
-			"giaVnd": "4.200.000 vnđ",
-			"type": "acoustic",
-			"label": "tanglewood"
-		}
-	]
+[
+	{
+	  "title": "Piano SamSung",
+	  "category": "piano",
+	  "hero": "piano_1.jpg",
+	  "gia": "14.000.000 vnđ",
+	  "type": "",
+	  "label": "",
+	  "giaVnd": "",
+	  "id": 1
+	},
+	{
+	  "title": "Piano Yamaha",
+	  "category": "piano",
+	  "hero": "piano_2.jpg",
+	  "gia": "16.000.000 vnđ",
+	  "type": "",
+	  "label": "",
+	  "giaVnd": "",
+	  "id": 2
+	},
+	{
+	  "title": "Piano Casio",
+	  "category": "piano",
+	  "hero": "piano_3.jpg",
+	  "gia": "25.000.000 vnđ",
+	  "type": "",
+	  "label": "",
+	  "giaVnd": "",
+	  "id": 3
+	},
+	{
+	  "title": "Piano Iphone",
+	  "category": "piano",
+	  "hero": "piano_4.jpg",
+	  "gia": "30.000.000 vnđ",
+	  "type": "",
+	  "label": "",
+	  "giaVnd": "",
+	  "id": 4
+	},
+	{
+	  "title": "Piano Taylor",
+	  "category": "piano",
+	  "hero": "piano_5.jpg",
+	  "gia": "36.000.000 vnđ",
+	  "type": "",
+	  "label": "",
+	  "giaVnd": "",
+	  "id": 5
+	},
+	{
+	  "title": "Piano Yamaha 2",
+	  "category": "piano",
+	  "hero": "piano_6.jpg",
+	  "gia": "40.000.000 vnđ",
+	  "type": "",
+	  "label": "",
+	  "giaVnd": "",
+	  "id": 6
+	},
+	{
+	  "title": "TAKAMINE GD10CE",
+	  "category": "guitar",
+	  "hero": "guitar/takamine-gd10ce.jpg",
+	  "giaVnd": "8.490.000 vnđ",
+	  "gia": "8490000",
+	  "type": "acoustic",
+	  "label": "takamine",
+	  "id": 7
+	},
+	{
+	  "title": "TAKAMINE-GD51NAT",
+	  "category": "guitar",
+	  "hero": "guitar/TAKAMINE-GD51NAT.jpg",
+	  "giaVnd": "8.030.000 vnđ",
+	  "gia": "8030000",
+	  "type": "acoustic",
+	  "label": "takamine",
+	  "id": 8
+	},
+	{
+	  "title": "TAKAMINE GN10",
+	  "category": "guitar",
+	  "hero": "guitar/takamine-gn10.jpg",
+	  "giaVnd": "5.660.000 vnđ",
+	  "gia": "5660000",
+	  "type": "acoustic",
+	  "label": "takamine",
+	  "id": 9
+	},
+	{
+	  "title": "Yamaha C40",
+	  "category": "guitar",
+	  "hero": "guitar/Classic-Yamaha-C40.jpg",
+	  "gia": "2790000",
+	  "giaVnd": "2.790.000 vnđ",
+	  "type": "classic",
+	  "label": "yamaha",
+	  "id": 10
+	},
+	{
+	  "title": "Yamaha C70",
+	  "category": "guitar",
+	  "hero": "guitar/Classic-Yamaha-C70.jpg",
+	  "gia": "3190000",
+	  "giaVnd": "3.190.000 vnđ",
+	  "type": "classic",
+	  "label": "yamaha",
+	  "id": 11
+	},
+	{
+	  "title": "Yamaha FS100C BL",
+	  "category": "guitar",
+	  "hero": "guitar/guitar-FS100C.jpg",
+	  "gia": "3390000",
+	  "giaVnd": "3.390.000 vnđ",
+	  "type": "acoustic",
+	  "label": "yamaha",
+	  "id": 12
+	},
+	{
+	  "title": "Cordoba C1",
+	  "category": "guitar",
+	  "hero": "guitar/7.jpg",
+	  "gia": "4650000",
+	  "giaVnd": "4.650.000 vnđ",
+	  "type": "classic",
+	  "label": "cordoba",
+	  "id": 13
+	},
+	{
+	  "title": "Cordoba C04",
+	  "category": "guitar",
+	  "hero": "guitar/c 04.jpg",
+	  "gia": "6390000",
+	  "giaVnd": "6.390.000 vnđ",
+	  "type": "classic",
+	  "label": "cordoba",
+	  "id": 14
+	},
+	{
+	  "title": "Cordoba C05",
+	  "category": "guitar",
+	  "hero": "guitar/c 05.jpg",
+	  "gia": "6690000",
+	  "giaVnd": "6.690.000 vnđ",
+	  "type": "classic",
+	  "label": "cordoba",
+	  "id": 15
+	},
+	{
+	  "title": "Fender C60s",
+	  "category": "guitar",
+	  "hero": "guitar/fender-cc-60s-450x471.jpg",
+	  "gia": "5690000",
+	  "giaVnd": "5.690.000 vnđ",
+	  "type": "acoustic",
+	  "label": "fender",
+	  "id": 16
+	},
+	{
+	  "title": "Fender C60SE",
+	  "category": "guitar",
+	  "hero": "guitar/fender-cc-60sce-450x471.jpg",
+	  "gia": "4990000",
+	  "giaVnd": "4.990.000 vnđ",
+	  "type": "acoustic",
+	  "label": "fender",
+	  "id": 17
+	},
+	{
+	  "title": "Fender CD140SE",
+	  "category": "guitar",
+	  "hero": "guitar/fender-cd-140sce-nat-450x471.jpg",
+	  "gia": "7390000",
+	  "giaVnd": "7.390.000 vnđ",
+	  "type": "acoustic",
+	  "label": "fender",
+	  "id": 18
+	},
+	{
+	  "title": "TAYLOR 110E",
+	  "category": "guitar",
+	  "hero": "guitar/guitar-FS100C.jpg",
+	  "gia": "23390000",
+	  "giaVnd": "23.390.000 vnđ",
+	  "type": "acoustic",
+	  "label": "taylor",
+	  "id": 19
+	},
+	{
+	  "title": "Tanglewood-DBTSFCEEB",
+	  "category": "guitar",
+	  "hero": "guitar/Tanglewood-DBTSFCEEB.jpg",
+	  "gia": "5690000",
+	  "giaVnd": "5.690.000 vnđ",
+	  "type": "acoustic",
+	  "label": "tanglewood",
+	  "id": 20
+	},
+	{
+	  "title": "Tanglewood WCR-DCE",
+	  "category": "guitar",
+	  "hero": "guitar/TWCR-DCE-t-450x471.jpg",
+	  "gia": "6390000",
+	  "giaVnd": "6.390.000 vnđ",
+	  "type": "acoustic",
+	  "label": "tanglewood",
+	  "id": 21
+	},
+	{
+	  "title": "Tanglewood twr2",
+	  "category": "guitar",
+	  "hero": "guitar/twr2d_2020-450x471.jpg",
+	  "gia": "2790000",
+	  "giaVnd": "2.790.000 vnđ",
+	  "type": "acoustic",
+	  "label": "tanglewood",
+	  "id": 22
+	},
+	{
+	  "title": "Tanglewood twudce",
+	  "category": "guitar",
+	  "hero": "guitar/twudce_2019-450x471.jpg",
+	  "gia": "4200000",
+	  "giaVnd": "4.200.000 vnđ",
+	  "type": "acoustic",
+	  "label": "tanglewood",
+	  "id": 23
+	}
+  ]
