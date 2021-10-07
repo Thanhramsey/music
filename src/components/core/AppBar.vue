@@ -104,6 +104,33 @@
             </v-list-item>
           </v-list>
         </v-menu>
+		 <v-menu
+          bottom
+          content-class="menu-sp"
+          origin="center center"
+          rounded="b-xl"
+          transition="fab-transition"
+          offset-y
+        >
+		 <template v-slot:activator="{ on, attrs }">
+            <v-btn class="hidden-sm-and-down" text v-bind="attrs" v-on="on">
+              Đổi màu giao diện
+            </v-btn>
+          </template>
+		  <v-list>
+            <v-list-item
+            >
+              <v-switch
+			  :label="theme"
+			  class="ma-0"
+              v-model="$vuetify.theme.dark"
+              color="orange"
+              hide-details
+			  append-icon="fa fa-moon-o"
+            ></v-switch>
+            </v-list-item>
+          </v-list>
+		</v-menu>
         <v-spacer />
         <v-badge :content="cartCount" :value="cartCount" color="blue" overlap>
           <v-btn small dark fab color="#de3139" @click="openDialogCart">
@@ -224,6 +251,13 @@ export default {
   computed: {
     ...mapGetters(["links"]),
     ...mapGetters(["appBars"]),
+	theme(){
+		if(this.$vuetify.theme.isDark){
+			return "Theme tối"
+		}else{
+			return "Theme sáng"
+		}
+	},
     products() {
       return this.$store.getters.products;
     },
