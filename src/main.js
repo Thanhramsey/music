@@ -7,6 +7,14 @@ import store from './store'
 Vue.config.productionTip = false
 import AOS from "aos";
 import "aos/dist/aos.css";
+import VueFbCustomerChat from 'vue-fb-customer-chat'
+Vue.use(VueFbCustomerChat, {
+	page_id: 102731695520330,
+	theme_color: '#2c3e50',
+	locale: 'en_US'
+  })
+//   102731695520330
+// 562547237566000
 new Vue({
   vuetify,
   router,

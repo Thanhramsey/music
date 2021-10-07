@@ -37,10 +37,4 @@ export default {
 .icon-course.fa.fa.fa.fa-music{
 	font-size: 80px;
 }
-.course-name{
-	color: #252525;
-	font-family: "serif";
-	font-weight: 700;
-	font-size: 20px;
-}
 </style>

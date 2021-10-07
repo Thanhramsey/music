@@ -25,9 +25,14 @@ export default {
 </script>
 <style>
 .group-name{
-	color: #252525;
 	font-family: "ui-monospace";
 	font-weight: 700;
 	font-size: 20px;
+}
+.theme--dark .group-name{
+	color: darkkhaki;
+}
+.theme--light .group-name{
+	color: #252525;
 }
 </style>

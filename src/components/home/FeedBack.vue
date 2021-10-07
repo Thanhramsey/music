@@ -84,13 +84,25 @@ export default {
   font-size: 80px;
 }
 .course-name {
-  color: #252525;
   font-family: "serif";
   font-weight: 700;
   font-size: 20px;
 }
+.theme--light .course-name{
+	color: #252525;
+}
+.theme--dark .course-name{
+	color: darkgrey;
+}
 .card-feedback.pa-5.v-card.v-sheet{
+	max-height: 180px;
+	height:175px
+}
+.theme--light .card-feedback.pa-5.v-card.v-sheet{
 	background-color: #ffffff;
+}
+.theme--dark .card-feedback.pa-5.v-card.v-sheet{
+	background-color: #1e1e1e;
 	max-height: 180px;
 	height:175px
 }

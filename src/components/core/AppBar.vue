@@ -142,9 +142,10 @@
     <!-- shopCart -->
     <v-dialog
       v-model="dialog"
-      max-width="60%"
+      max-width="65%"
       @keydown.esc="cancel"
       height="200px"
+	  content-class="cart-dialog"
     >
       <v-card>
         <v-card-title
@@ -390,6 +391,12 @@ overflow-x: hidden;
     font-size: 8px;
     height: 10px;
     padding: 0 6px !important;
+  }
+  .cart-dialog{
+	  max-width:85% !important;
+  }
+   .detail-dialog{
+	  max-width:85% !important;
   }
 }
 </style>

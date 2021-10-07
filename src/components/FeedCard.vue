@@ -1,6 +1,6 @@
 <template>
   <v-col cols="12" :md="size === 2 ? 4 : size === 3 ? 3 : undefined">
-    <v-dialog v-model="dialog" max-width="60%" @keydown.esc="cancel">
+    <v-dialog v-model="dialog" max-width="60%" @keydown.esc="cancel"  content-class="detail-dialog">
       <v-card>
         <v-row>
           <v-col cols="12" lg="6">
