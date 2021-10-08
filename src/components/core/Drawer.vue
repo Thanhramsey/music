@@ -49,9 +49,15 @@ export default {
       } else if (action === "listGuitar") {
         this.$router.push({ name: "listGuitar" }).catch((err) => {});
       } else if (action === "listOrgan") {
-        this.$router.push({ name: "listProduct" }).catch((err) => {});
-      } else if (action === "other") {
-        this.$router.push({ name: "listProduct" }).catch((err) => {});
+        this.$router.push({ name: "listOrgan" }).catch((err) => {});
+      } else if (action === "hoTroKhGt") {
+        this.$router.push({ name: "hoTroKhGt" }).catch((err) => {});
+      }else if (action === "hoTroKhP") {
+        this.$router.push({ name: "hoTroKhP" }).catch((err) => {});
+      }else if (action === "hoTroKhP") {
+        this.$router.push({ name: "hoTroKhP" }).catch((err) => {});
+      }else if (action === "music") {
+        this.$router.push({ name: "home" }).catch((err) => {});
       }
     },
   },

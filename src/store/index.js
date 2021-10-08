@@ -11,7 +11,7 @@ export default new Vuex.Store({
     items: [
       {
         text: 'Trang chủ',
-        href: '/music',
+        href: 'music',
       },
       {
         text: 'About us',
@@ -30,8 +30,12 @@ export default new Vuex.Store({
         href: 'listOrgan',
       },
 	  {
-        text: 'Khác',
-        href: 'listOther',
+        text: 'Hướng dẫn chọn mua piano',
+        href: 'hoTroKhP',
+      },
+	  {
+        text: 'Hướng dẫn chọn mua guitar',
+        href: 'hoTroKhGt',
       },
     ],
 	appBars: [
@@ -45,6 +49,7 @@ export default new Vuex.Store({
 		},
 	],
 	StoreCart: [],
+	allProducts:[],
   },
 
   getters: {
@@ -72,6 +77,9 @@ export default new Vuex.Store({
     },
 	appBars: (state, getters) => {
 		return state.appBars;
+	},
+	allProducts: (state) => {
+		return [...state.products.products.piano,...state.products.products.guitar,...state.products.products.organ];
 	},
 	StoreCart: (state) => state.StoreCart,
 	products: (state) => state.products,

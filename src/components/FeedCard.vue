@@ -2,7 +2,7 @@
   <v-col cols="12" :md="size === 2 ? 4 : size === 3 ? 3 : undefined">
     <v-dialog v-model="dialog" max-width="60%" @keydown.esc="cancel"  content-class="detail-dialog">
       <v-card>
-        <v-row>
+        <v-row class="pl-3 pr-3">
           <v-col cols="12" lg="6">
             <v-img :src="pic" alt="" contain />
           </v-col>
@@ -71,9 +71,10 @@
 
     <base-card
       :height="value.prominent ? 450 : 350"
-      dark
+      light
       class="card-info"
       data-aos="fade-right"
+	  elevation="12"
     >
       <v-img
         :src="require(`@/assets/articles/${value.hero}`)"
@@ -173,8 +174,16 @@ export default {
   color: #000000;
 }
 .card-info {
-  border: 5px groove #bbbbbb !important;
-  /* border-radius: 9px */
+  border-radius: 5px;
+  padding:12px;
+}
+.theme--light .v-card.card-info{
+  border: 5px groove #8da7c1 !important;
+  background-color: transparent ;
+}
+.theme--dark .v-card.card-info{
+  border: 5px groove #dfa924 !important;
+  background-color: #ffffff ;
 }
 .card-info .v-responsive.v-image {
   padding: 12px;

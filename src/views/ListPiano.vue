@@ -102,11 +102,11 @@ export default {
       },
       {
         text: "Piano cơ",
-        value: "pianoC",
+        value: "Piano cơ",
       },
       {
         text: "Piano Điện",
-        value: "pianoD",
+        value: "Piano điện",
       },
     ],
     hangDans: [
@@ -115,28 +115,20 @@ export default {
         value: "",
       },
       {
-        text: "Takamine",
-        value: "takamine",
-      },
-      {
-        text: "Tanglewood",
-        value: "tanglewood",
+        text: "Taylor",
+        value: "Taylor",
       },
       {
         text: "Yamaha",
-        value: "yamaha",
+        value: "Yamaha",
       },
       {
-        text: "Fender",
-        value: "fender",
+        text: "Casio",
+        value: "Casio",
       },
       {
-        text: "Taylor",
-        value: "taylor",
-      },
-      {
-        text: "Cordoba",
-        value: "cordoba",
+        text: "Samsung",
+        value: "Samsung",
       },
     ],
   }),
@@ -144,7 +136,7 @@ export default {
     ...mapState(["products"]),
   },
   created: function () {
-    this.pianos = this.products.filter((x) => x.category == "piano");
+    this.pianos = this.products.products.piano;
   },
 
   components: {

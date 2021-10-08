@@ -269,8 +269,9 @@ export default {
       return this.StoreCart.length;
     },
     cart() {
+		console.log(this.$store.getters.allProducts);
       return this.StoreCart.map((cartitems) => {
-        return this.$store.getters.products.find((itemForSale) => {
+        return this.$store.getters.allProducts.find((itemForSale) => {
           return cartitems === itemForSale.id;
         });
       });
@@ -292,7 +293,7 @@ export default {
       { title: "Đàn piano", action: "listPiano" },
       { title: "Đàn guitar", action: "listGuitar" },
       { title: "Đàn organ", action: "listOrgan" },
-      { title: "Phụ kiện và nhạc cụ khác", action: "other" },
+    //   { title: "Phụ kiện và nhạc cụ khác", action: "other" },
     ],
     //   khoaHocs: [
     //     { title: 'Khóa học piano',action: 'listPiano' },
@@ -301,10 +302,9 @@ export default {
     //     { title: 'Khóa học nhạc cụ khác',action:'other' },
     //   ],
     hoTroKhachHang: [
-      { title: "Hướng dẫn chọn mua piano", action: "listPiano" },
-      { title: "Khóa học chọn mua guitar", action: "other" },
-      { title: "Hướng dẫn đặt hàng online", action: "listGuitar" },
-      { title: "Câu hỏi thường gặp", action: "listOrgan" },
+      { title: "Hướng dẫn chọn mua piano", action: "hoTroKhP" },
+      { title: "Hướng dẫn chọn mua guitar", action: "hoTroKhGt" },
+      { title: "Câu hỏi thường gặp", action: "offenQuestion" },
     ],
   }),
 
@@ -324,9 +324,15 @@ export default {
       } else if (action === "listGuitar") {
         this.$router.push({ name: "listGuitar" }).catch((err) => {});
       } else if (action === "listOrgan") {
-        this.$router.push({ name: "listProduct" }).catch((err) => {});
+        this.$router.push({ name: "listOrgan" }).catch((err) => {});
       } else if (action === "other") {
         this.$router.push({ name: "listProduct" }).catch((err) => {});
+      }else if (action === "hoTroKhGt") {
+        this.$router.push({ name: "hoTroKhGt" }).catch((err) => {});
+      }else if (action === "hoTroKhP") {
+        this.$router.push({ name: "hoTroKhP" }).catch((err) => {});
+      }else if (action === "offenQuestion") {
+        this.$router.push({ name: "offenQuestion" }).catch((err) => {});
       }
     },
 	thanhToan(){

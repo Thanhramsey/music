@@ -7,7 +7,7 @@
 
       <feed-card
         v-for="(article, i) in paginatedArticles"
-        :key="article.title"
+        :key="article.id"
         :size="layout[i]"
         :value="article"
       />

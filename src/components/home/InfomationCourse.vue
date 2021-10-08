@@ -131,7 +131,7 @@
 		  <v-spacer/>
 	  </v-row>
 	  <v-row class="mt-3">
-		   <v-carousel height="250" class="feedback-carou" :show-arrows="false" :cycle="true" interval="1500" >
+		   <v-carousel height="250" class="feedback-carou" :show-arrows="false" :cycle="true" interval="1500" light >
 			   <v-carousel-item
 				v-for="(item, i) in feedBacks"
 				:key="i"

@@ -1,5 +1,5 @@
 <template>
-  <div id="listGuitar">
+  <div id="listOrgan">
     <v-container>
       <v-row>
         <v-col cols="12" lg="3">
@@ -76,7 +76,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <articles :articles="guitars" :category="category">
+    <articles :articles="organs" :category="category">
       <!-- <banner /> -->
     </articles>
   </div>
@@ -85,12 +85,12 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  name: "ListGuitar",
+  name: "ListOrgan",
   data: () => ({
-    category: "guitar",
+    category: "organ",
     loader: null,
     loading3: false,
-    guitars: "",
+    organs: "",
     loaiDan: "",
     hangDan: "",
     giaTu: 0,
@@ -101,12 +101,8 @@ export default {
         value: "",
       },
       {
-        text: "Acoustic",
-        value: "acoustic",
-      },
-      {
-        text: "Classic",
-        value: "classic",
+        text: "Organ điện",
+        value: "",
       },
     ],
     hangDans: [
@@ -115,28 +111,12 @@ export default {
         value: "",
       },
       {
-        text: "Takamine",
-        value: "takamine",
+        text: "Casio",
+        value: "Casio",
       },
       {
-        text: "Tanglewood",
-        value: "tanglewood",
-      },
-      {
-        text: "Yamaha",
-        value: "yamaha",
-      },
-      {
-        text: "Fender",
-        value: "fender",
-      },
-      {
-        text: "Taylor",
-        value: "taylor",
-      },
-      {
-        text: "Cordoba",
-        value: "cordoba",
+        text: "Roland",
+        value: "roland",
       },
     ],
   }),
@@ -144,7 +124,7 @@ export default {
     ...mapState(["products"]),
   },
   created: function () {
-    this.guitars = this.products.products.guitar;
+    this.organs = this.products.products.organ;
   },
 
   components: {
@@ -154,7 +134,7 @@ export default {
     loader() {
       const l = this.loader;
       this[l] = !this[l];
-      setTimeout(() => (this[l] = false), 500);
+      setTimeout(() => (this[l] = false), 1000);
       this.loader = null;
     },
   },
@@ -167,7 +147,7 @@ export default {
         this.giaTu == 0 &&
         this.den == 0
       ) {
-        this.guitars = this.products.filter((x) => x.category == "guitar");
+        this.organs = this.products.filter((x) => x.category == "organ");
       } else {
         if (
           this.loaiDan != "" &&
@@ -175,7 +155,7 @@ export default {
           this.giaTu != 0 &&
           this.den != 0
         ) {
-          this.guitars = this.products.filter(
+          this.organs = this.products.filter(
             (x) =>
               x.label == this.hangDan &&
               x.type == this.loaiDan &&
@@ -183,22 +163,20 @@ export default {
               parseInt(x.gia) < this.den
           );
         } else {
-          this.guitars = this.products;
+          this.organs = this.products;
           if (this.loaiDan != "") {
-            this.guitars = this.guitars.filter((x) => x.type == this.loaiDan);
+            this.organs = this.organs.filter((x) => x.type == this.loaiDan);
           }
           if (this.hangDan != "") {
-            this.guitars = this.guitars.filter((x) => x.label == this.hangDan);
+            this.organs = this.organs.filter((x) => x.label == this.hangDan);
           }
           if (this.giaTu != 0) {
-            this.guitars = this.guitars.filter(
+            this.organs = this.organs.filter(
               (x) => parseInt(x.gia) > this.giaTu
             );
           }
           if (this.den != 0) {
-            this.guitars = this.guitars.filter(
-              (x) => parseInt(x.gia) < this.den
-            );
+            this.organs = this.organs.filter((x) => parseInt(x.gia) < this.den);
           }
         }
       }
@@ -206,49 +184,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.btn {
-  cursor: pointer;
-  position: relative;
-  padding: 10px 20px;
-  background: #white;
-  font-size: 16px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  transition: all 1s;
-  &:after,
-  &:before {
-    content: " ";
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    border: 0px solid #fff;
-    transition: all 1s;
-  }
-  &:after {
-    top: -1px;
-    left: -1px;
-    border-top: 3px solid #607d8b;
-    border-left: 3px solid #607d8b;
-  }
-  &:before {
-    bottom: -1px;
-    right: -1px;
-    border-bottom: 3px solid #607d8b;
-    border-right: 3px solid #607d8b;
-  }
-  &:hover {
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    background:rgba(255, 214, 120, 0.51);
-    // color:white;
-    &:before,
-    &:after {
-      width: 100%;
-      height: 100%;
-    //   border-color:white;
-    }
-  }
-}
-</style>
