@@ -104,7 +104,7 @@
             </v-list-item>
           </v-list>
         </v-menu>
-		 <v-menu
+        <v-menu
           bottom
           content-class="menu-sp"
           origin="center center"
@@ -112,40 +112,72 @@
           transition="fab-transition"
           offset-y
         >
-		 <template v-slot:activator="{ on, attrs }">
+          <template v-slot:activator="{ on, attrs }">
             <v-btn class="hidden-sm-and-down" text v-bind="attrs" v-on="on">
               Đổi màu giao diện
             </v-btn>
           </template>
-		  <v-list>
-            <v-list-item
-            >
+          <v-list>
+            <v-list-item>
               <v-switch
-			  :label="theme"
-			  class="ma-0"
-              v-model="$vuetify.theme.dark"
-              color="orange"
-              hide-details
-			  append-icon="fa fa-moon-o"
-            ></v-switch>
+                :label="theme"
+                class="ma-0"
+                v-model="$vuetify.theme.dark"
+                color="orange"
+                hide-details
+                append-icon="fa fa-moon-o"
+              ></v-switch>
             </v-list-item>
           </v-list>
-		</v-menu>
+        </v-menu>
         <v-spacer />
-        <v-badge :content="cartCount" :value="cartCount" color="blue" overlap>
-          <v-btn small dark fab color="#de3139" @click="openDialogCart">
-            <v-icon>fa fa-shopping-cart</v-icon>
-          </v-btn>
-        </v-badge>
       </v-row>
     </v-container>
+    <v-badge :content="cartCount" :value="cartCount" color="blue" overlap>
+      <v-btn small dark fab color="#de3139" @click="openDialogCart">
+        <v-icon>fa fa-shopping-cart</v-icon>
+      </v-btn>
+    </v-badge>
+    <v-menu
+      bottom
+      content-class="menu-sp"
+      origin="center center"
+      rounded="b-xl"
+      transition="fab-transition"
+      offset-y
+    >
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          small
+          dark
+          fab
+          color="#de3139"
+          class="ml-3"
+          v-bind="attrs"
+          v-on="on"
+        >
+          <v-icon>fa fa-user-o</v-icon>
+        </v-btn>
+      </template>
+
+      <v-list>
+        <v-list-item
+          v-for="(item, i) in userAction"
+          :key="i"
+          @click="menuActionClick(item.action)"
+        >
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+
     <!-- shopCart -->
     <v-dialog
       v-model="dialog"
       max-width="65%"
       @keydown.esc="cancel"
       height="200px"
-	  content-class="cart-dialog"
+      content-class="cart-dialog"
     >
       <v-card>
         <v-card-title
@@ -231,7 +263,11 @@
           </v-col>
           <v-spacer />
           <v-col lg="3">
-            <v-btn color="blue-grey" class="mt-0 ma-2 white--text" @click="thanhToan">
+            <v-btn
+              color="blue-grey"
+              class="mt-0 ma-2 white--text"
+              @click="thanhToan"
+            >
               Thanh Toán <v-icon right dark> fa fa-money</v-icon></v-btn
             >
           </v-col>
@@ -252,13 +288,13 @@ export default {
   computed: {
     ...mapGetters(["links"]),
     ...mapGetters(["appBars"]),
-	theme(){
-		if(this.$vuetify.theme.isDark){
-			return "Theme tối"
-		}else{
-			return "Theme sáng"
-		}
-	},
+    theme() {
+      if (this.$vuetify.theme.isDark) {
+        return "Theme tối";
+      } else {
+        return "Theme sáng";
+      }
+    },
     products() {
       return this.$store.getters.products;
     },
@@ -269,7 +305,7 @@ export default {
       return this.StoreCart.length;
     },
     cart() {
-		console.log(this.$store.getters.allProducts);
+      console.log(this.$store.getters.allProducts);
       return this.StoreCart.map((cartitems) => {
         return this.$store.getters.allProducts.find((itemForSale) => {
           return cartitems === itemForSale.id;
@@ -289,11 +325,12 @@ export default {
   data: () => ({
     shopCartNum: 10,
     dialog: false,
+	userDialog:false,
     items: [
       { title: "Đàn piano", action: "listPiano" },
       { title: "Đàn guitar", action: "listGuitar" },
       { title: "Đàn organ", action: "listOrgan" },
-    //   { title: "Phụ kiện và nhạc cụ khác", action: "other" },
+      //   { title: "Phụ kiện và nhạc cụ khác", action: "other" },
     ],
     //   khoaHocs: [
     //     { title: 'Khóa học piano',action: 'listPiano' },
@@ -305,6 +342,10 @@ export default {
       { title: "Hướng dẫn chọn mua piano", action: "hoTroKhP" },
       { title: "Hướng dẫn chọn mua guitar", action: "hoTroKhGt" },
       { title: "Câu hỏi thường gặp", action: "offenQuestion" },
+    ],
+    userAction: [
+      { title: "Login", action: "loginUser" },
+      { title: "Register", action: "registerUser" },
     ],
   }),
 
@@ -327,18 +368,23 @@ export default {
         this.$router.push({ name: "listOrgan" }).catch((err) => {});
       } else if (action === "other") {
         this.$router.push({ name: "listProduct" }).catch((err) => {});
-      }else if (action === "hoTroKhGt") {
+      } else if (action === "hoTroKhGt") {
         this.$router.push({ name: "hoTroKhGt" }).catch((err) => {});
-      }else if (action === "hoTroKhP") {
+      } else if (action === "hoTroKhP") {
         this.$router.push({ name: "hoTroKhP" }).catch((err) => {});
-      }else if (action === "offenQuestion") {
+      } else if (action === "offenQuestion") {
         this.$router.push({ name: "offenQuestion" }).catch((err) => {});
+      } else if (action === "loginUser") {
+        this.$router.push({ name: "userLogin" ,params: { isLogin: true}}).catch((err) => {});
+      } else if (action === "registerUser") {
+        this.$router.push({ name: "userRegister" ,params: { isLogin: false}}).catch((err) => {});
       }
     },
-	thanhToan(){
-		this.dialog = false;
-		 this.$store.dispatch("thanhToan");
-	},
+    thanhToan() {
+      this.dialog = false;
+      this.$store.dispatch("thanhToan");
+	  this.$router.push({ name: "thanhToan" ,params: { cart: this.cart}}).catch((err) => {});
+    },
     openDialogCart() {
       this.dialog = true;
     },
@@ -363,13 +409,13 @@ export default {
 .menu-bar .theme--light.v-btn {
   color: #ffffff;
 }
-.v-card__title.text-h5.white--text{
-	font-family: cursive;
-	height: 80px;
-	font-size:1.75rem !important;
+.v-card__title.text-h5.white--text {
+  font-family: cursive;
+  height: 80px;
+  font-size: 1.75rem !important;
 }
-.v-dialog.v-dialog--active{
-overflow-x: hidden;
+.v-dialog.v-dialog--active {
+  overflow-x: hidden;
 }
 @media only screen and (max-width: 900px) {
   .img-cart {
@@ -398,11 +444,11 @@ overflow-x: hidden;
     height: 10px;
     padding: 0 6px !important;
   }
-  .cart-dialog{
-	  max-width:85% !important;
+  .cart-dialog {
+    max-width: 85% !important;
   }
-   .detail-dialog{
-	  max-width:85% !important;
+  .detail-dialog {
+    max-width: 85% !important;
   }
 }
 </style>

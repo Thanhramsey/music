@@ -7,6 +7,9 @@ import ListOrgan from '../views/ListOrgan.vue'
 import hoTroKhGt from '../views/hoTroKhGt.vue'
 import hoTroKhP from '../views/hoTroKhP.vue'
 import OffenQuestion from '../views/OffenQuestion.vue'
+import userLogin from '../views/UserLogin.vue'
+import userRegister from '../views/UserRegister.vue'
+import thanhToan from '../views/ThanhToan.vue'
 
 Vue.use(Router)
 
@@ -54,6 +57,20 @@ export default new Router({
 		name: 'offenQuestion',
 		component: OffenQuestion,
 	},
-
+	{
+		path: '/userLogin',
+		name: 'userLogin',
+		component: userLogin,
+	},
+	{
+		path: '/userRegister',
+		name: 'userRegister',
+		component: userRegister,
+	},
+	{
+		path: '/thanhToan',
+		name: 'thanhToan',
+		component: thanhToan,
+	},
   ],
 })
